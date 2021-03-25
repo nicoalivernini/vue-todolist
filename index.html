@@ -9,20 +9,22 @@
   <link rel="stylesheet" href="assets/css/master.css">
 </head>
 <body>
-  <div class="container">
-    <div class="to-do-list">
-      <div class="title-to-do-list">
-        <h1>To Do List</h1>
-      </div>
-      <div class="content-to-do-list">
-        <ul>
-          <li>
-            <span>Interno del li</span>
-            <span><i class="fas fa-edit"></i></span>
-            <span><i class="fas fa-check"></i></span>
-          </li>
-        </ul>
-        <input type="text">
+  <div id="root">
+    <div class="container">
+      <div class="to-do-list">
+        <div class="title-to-do-list">
+          <h1>To Do List</h1>
+        </div>
+        <div class="content-to-do-list">
+          <ul>
+            <li v-for="toDo in toDos">
+              <span>{{ toDo.title }}</span>
+              <span><i class="fas fa-edit"></i></span>
+              <span><i class="fas fa-check"></i></span>
+            </li>
+          </ul>
+          <input type="text">
+        </div>
       </div>
     </div>
   </div>
