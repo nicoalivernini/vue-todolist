@@ -52,14 +52,15 @@ var app = new Vue (
       fatto: function(toDo) {
         let index = this.toDos.indexOf(toDo);
         this.toDos[index].scope = 'done';
-        console.log(index);
 
       },
 
-      cancellare: function(){
-        console.log(this.toDos);
-      }
+      cancellare: function(toDo){
+        let index = this.toDos.indexOf(toDo);
 
+        this.toDos.splice(index, 1)
+        console.log(index);
+      },
 
     }//Chiusura Methods
 
