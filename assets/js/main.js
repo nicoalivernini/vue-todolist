@@ -66,15 +66,3 @@ var app = new Vue (
 
 
 }); //Chiusura Vue
-
-//Dobbiamo fare un'array di cose da fare così da avere alcuni esempio
-//Dobbiamo dare la possibilità di aggiungere le cose da poter fare
-  //Calcolare invio con la tastiera
-  //L'inserimento di stringa vuota da disabilitare
-  //Far tornare l'input vuoto quando mando il comando per inserire
-//Quando clicchiamo sul check
-  //Il testo deve sbarrarsi
-  //Le icone devono sparire
-  //Deve apparire l'icona del cestino
-  //Quando clicchiamo sull'icona del cestino deve essere cancellato
-  //Deve spostarsi come ultimo della lista

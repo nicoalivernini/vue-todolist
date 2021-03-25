@@ -19,7 +19,7 @@
           <ul>
             <li v-for="(toDo) in toDosFatti ">
               <span :class="(toDo.scope == 'done') ? 'done' : '' ">{{ toDo.title }}</span>
-              <span><i class="fas fa-edit"></i></span>
+              <span><i class="fas fa-edit" :class="(toDo.scope == 'done') ? 'done' : '' "></i></span>
               <span><i class="fas fa-check" @click="fatto(toDo)" :class="(toDo.scope == 'done') ? 'done' : '' " ></i></span>
               <span><i class="fas fa-trash" @click="cancellare(toDo)" :class="(toDo.scope == 'done') ? '' : 'done' "></i></span>
             </li>
