@@ -27,7 +27,7 @@ li {
 i.done {
   display: none;
 }
-li.done {
+span.done {
   text-decoration: line-through;
 }
 

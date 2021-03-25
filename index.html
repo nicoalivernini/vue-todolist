@@ -17,10 +17,10 @@
         </div>
         <div class="content-to-do-list">
           <ul>
-            <li v-for="(toDo, i) in toDos " :class="(toDo.scope == 'done') ? 'done' : '' ">
-              <span>{{ toDo.title }}</span>
+            <li v-for="(toDo) in toDos ">
+              <span :class="(toDo.scope == 'done') ? 'done' : '' ">{{ toDo.title }}</span>
               <span><i class="fas fa-edit"></i></span>
-              <span><i class="fas fa-check" @click="fatto(i)" :class="(toDo.scope == 'done') ? 'done' : '' " ></i></span>
+              <span><i class="fas fa-check" @click="fatto(toDo)" :class="(toDo.scope == 'done') ? 'done' : '' " ></i></span>
               <span><i class="fas fa-trash" @click="cancellare" :class="(toDo.scope == 'done') ? '' : 'done' "></i></span>
             </li>
           </ul>

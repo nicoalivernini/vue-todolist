@@ -3,7 +3,6 @@ var app = new Vue (
     el: '#root',
     data: {
       toDoUtente: '',
-
       toDos: [
         {
           title: 'Allenarsi',
@@ -23,18 +22,23 @@ var app = new Vue (
         }
       ],//Fine array toDos
 
-      toDosFatti: [
-
-      ],//Fine array toDosFatti
-
-      toDosDaFare: [
-
-      ],//Fine array toDosDaFare
-
     },//Chiurusa Data
+
+    computed: {
+      toDosFatti: function () {
+        let toDoFatti = this.toDo.filter((todo) => todo.scope == 'done');
+        let toDoDaFare = this.toDo.filter((todo) => todo.scope == 'to-do');
+        console.log(toDoFatti);
+        return [...toDoDaFare, ...toDoFatti]
+      },
+
+
+
+    },//Chiusura created
 
     methods: {
       insertInput: function() {
+
         if (this.toDoUtente != '') {
           var newObj = {
             title: this.toDoUtente,
@@ -45,15 +49,10 @@ var app = new Vue (
         }
       },
 
-      fatto: function(index) {
+      fatto: function(toDo) {
+        let index = this.toDos.indexOf(toDo);
         this.toDos[index].scope = 'done';
-        if (this.toDos[index].scope = 'done') {
-          this.toDosFatti.push(this.toDos[index])
-          console.log(this.toDosFatti);
-        } else {
-          this.toDosDaFare.push(this.toDos[index])
-          console.log(this.toDosDaFare);
-        }
+        console.log(index);
 
       },
 
