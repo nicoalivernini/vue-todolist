@@ -21,6 +21,7 @@
               <span>{{ toDo.title }}</span>
               <span><i class="fas fa-edit"></i></span>
               <span><i class="fas fa-check" @click="fatto(i)" :class="(toDo.scope == 'done') ? 'done' : '' " ></i></span>
+              <span><i class="fas fa-trash" :class="(toDo.scope == 'done') ? '' : 'done' "></i></span>
             </li>
           </ul>
           <input v-model="toDoUtente" v-on:keyup.enter="insertInput" type="text" placeholder="Inserisci nuova attività">
