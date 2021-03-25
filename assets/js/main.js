@@ -27,16 +27,17 @@ var app = new Vue (
 
     methods: {
       insertInput: function() {
-        let newObj = {
-          title: this.toDoUtente,
-          scope: 'to-do'
+        if (this.toDoInput != '') {
+          var newObj = {
+            title: this.toDoUtente,
+            scope: 'to-do'
+          }
+          this.toDos.push(newObj);
+          this.toDoUtente = '';
         }
-
-        this.toDos.push(newObj);
-        console.log(this.toDoUtente);
-        console.log(newObj);
       },
 
+      
     }
 
 
