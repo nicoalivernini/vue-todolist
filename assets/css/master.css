@@ -3,3 +3,26 @@ padding: 0;
 margin: 0;
 box-sizing: border-box;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-to-do-list {
+  margin-top: 10px;
+}
+
+.content-to-do-list ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-around;
+}
+
+input {
+  margin-top: 15px;
+}
