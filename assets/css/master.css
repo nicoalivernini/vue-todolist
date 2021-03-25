@@ -24,6 +24,13 @@ li {
   margin: 5px 0;
 }
 
+i.done {
+  display: none;
+}
+li.done {
+  text-decoration: line-through;
+}
+
 input {
   margin-top: 15px;
   padding: 5px;

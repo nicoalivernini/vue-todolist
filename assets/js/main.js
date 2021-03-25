@@ -21,9 +21,9 @@ var app = new Vue (
           title: 'Esercizi Inglese',
           scope: 'to-do'
         }
-      ]
+      ]//Fine array toDos
 
-    },
+    },//Chiurusa Data
 
     methods: {
       insertInput: function() {
@@ -34,13 +34,17 @@ var app = new Vue (
           }
           this.toDos.push(newObj);
           this.toDoUtente = '';
-        } else {
-          console.log('non sono vuoto');
         }
       },
 
+      fatto: function(index) {
+        this.toDos[index].scope = 'done';
+        
 
-    }
+      }
+
+
+    }//Chiusura Methods
 
 
 }); //Chiusura Vue
@@ -50,3 +54,8 @@ var app = new Vue (
   //Calcolare invio con la tastiera
   //L'inserimento di stringa vuota da disabilitare
   //Far tornare l'input vuoto quando mando il comando per inserire
+//Quando clicchiamo sul check
+  //Il testo deve sbarrarsi
+  //Le icone devono sparire
+  //Deve apparire l'icona del cestino
+  //Deve spostarsi come ultimo della lista
