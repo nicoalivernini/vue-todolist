@@ -17,7 +17,7 @@
         </div>
         <div class="content-to-do-list">
           <ul>
-            <li v-for="(toDo) in toDos ">
+            <li v-for="(toDo) in toDosFatti ">
               <span :class="(toDo.scope == 'done') ? 'done' : '' ">{{ toDo.title }}</span>
               <span><i class="fas fa-edit"></i></span>
               <span><i class="fas fa-check" @click="fatto(toDo)" :class="(toDo.scope == 'done') ? 'done' : '' " ></i></span>

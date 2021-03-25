@@ -26,8 +26,8 @@ var app = new Vue (
 
     computed: {
       toDosFatti: function () {
-        let toDoFatti = this.toDo.filter((todo) => todo.scope == 'done');
-        let toDoDaFare = this.toDo.filter((todo) => todo.scope == 'to-do');
+        let toDoFatti = this.toDos.filter((toDos) => toDos.scope == 'done');
+        let toDoDaFare = this.toDos.filter((toDos) => toDos.scope == 'to-do');
         console.log(toDoFatti);
         return [...toDoDaFare, ...toDoFatti]
       },
