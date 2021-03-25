@@ -23,7 +23,7 @@
               <span><i class="fas fa-check"></i></span>
             </li>
           </ul>
-          <input type="text">
+          <input v-model="toDoUtente" v-on:keyup.enter="insertInput" type="text" placeholder="Inserisci nuova attività">
         </div>
       </div>
     </div>

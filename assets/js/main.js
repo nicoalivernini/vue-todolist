@@ -2,6 +2,8 @@ var app = new Vue (
   {
     el: '#root',
     data: {
+      toDoUtente: '',
+
       toDos: [
         {
           title: 'Allenarsi',
@@ -24,6 +26,16 @@ var app = new Vue (
     },
 
     methods: {
+      insertInput: function() {
+        let newObj = {
+          title: this.toDoUtente,
+          scope: 'to-do'
+        }
+
+        this.toDos.push(newObj);
+        console.log(this.toDoUtente);
+        console.log(newObj);
+      },
 
     }
 

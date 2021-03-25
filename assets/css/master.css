@@ -26,4 +26,9 @@ li {
 
 input {
   margin-top: 15px;
+  padding: 5px;
+}
+
+input::placeholder {
+  text-align: center;
 }
