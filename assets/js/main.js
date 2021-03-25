@@ -21,7 +21,15 @@ var app = new Vue (
           title: 'Esercizi Inglese',
           scope: 'to-do'
         }
-      ]//Fine array toDos
+      ],//Fine array toDos
+
+      toDosFatti: [
+
+      ],//Fine array toDosFatti
+
+      toDosDaFare: [
+
+      ],//Fine array toDosDaFare
 
     },//Chiurusa Data
 
@@ -39,8 +47,18 @@ var app = new Vue (
 
       fatto: function(index) {
         this.toDos[index].scope = 'done';
-        
+        if (this.toDos[index].scope = 'done') {
+          this.toDosFatti.push(this.toDos[index])
+          console.log(this.toDosFatti);
+        } else {
+          this.toDosDaFare.push(this.toDos[index])
+          console.log(this.toDosDaFare);
+        }
 
+      },
+
+      cancellare: function(){
+        console.log(this.toDos);
       }
 
 
@@ -58,4 +76,5 @@ var app = new Vue (
   //Il testo deve sbarrarsi
   //Le icone devono sparire
   //Deve apparire l'icona del cestino
+  //Quando clicchiamo sull'icona del cestino deve essere cancellato
   //Deve spostarsi come ultimo della lista
